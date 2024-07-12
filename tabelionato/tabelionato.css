@@ -1,0 +1,20 @@
+a {
+    text-decoration: none;
+}
+
+.imagem {
+    width: 200px;
+    float: left;
+    margin: 15px;
+    position: relative;
+}
+
+.imagem img {
+    width: 100%;
+}
+
+.imagem a {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
