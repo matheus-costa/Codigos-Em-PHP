@@ -1,0 +1,10 @@
+		{% extends "layout.html" %}
+		{% block conteudo %}
+		<h2>Compre seu Voo</h2>
+        <h2>Identifique-se</h2>
+        <form>
+            <p><input type="text" name="cpf" placeholder="Digite o CPF do passageiro." /></p>
+            <p><input type="text" name="nome" placeholder="Digite o nome do passageiro." /></p>
+            <p><button type="submit" formmethod="post" formaction="/confirmar">Comprar</button></p>
+        </form>
+		{% endblock %}

@@ -1,0 +1,8 @@
+        {% extends "layout.html" %}
+        {% block conteudo %}
+            {% if resultado %}
+                <h2>Passagem comprada com sucesso!</h2>
+            {% else %}
+                <h2>Ocorreu um erro.</h2>
+            {% endif %}
+        {% endblock %}
