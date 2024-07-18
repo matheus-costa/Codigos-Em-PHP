@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+{% block conteudo %}
+<h2>Comprar passagem</h2>
+<form action="comprar_passagem.html" method="POST"> 
+    <p>Informe o Nome da Companhia<input type="text" name="companhia" autocomplete="off" value="{{dados['companhia']}}"/> 
+    </p>
+    <p>Informe o Voo:<input type="hidden" name="voo" autocomplete="off" value="{{dados['voo']}}"/> 
+    <p>Origem do Voo:<input type="text" id="i1" autocomplete="off" value="{{dados['origem']}}"/> 
+    </p>
+    <p>Informe o Destino do Voo:<input type="text" id="i2" autocomplete="off" value="{{dados['destino']}}"/> 
+    </p>
+    <p>Informe a Data do Voo:<input type="text" id="i3"  autocomplete="off" value="{{dados['data']}}"/> 
+    </p>
+    <p>Informe o Preço da Passagem:<input type="number" id="i4"  autocomplete="off" value="{{dados['preco']}}"/> 
+    </p> 
+    <p>Informe o Nome do Cliente:<input type="text" id="i5" name="nome" autocomplete="off" value=""/> 
+    </p>
+    <p>Informe o CPF do Cliente:<input type="text" id="i6" name="cpf" autocomplete="off" value=""/> 
+    </p>
+    <p>
+        <input type="submit" value="Cadastrar Banca"/></input>
+        <input type="reset" value= "Redefinir"/></input>
+        <input type="submit" value="Comprar passagem"/><input>
+    </p>
+</form>
+
+{% endblock %}

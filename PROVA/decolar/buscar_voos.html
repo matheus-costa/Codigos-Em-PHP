@@ -1,0 +1,44 @@
+{% extends "layout.html" %}
+{% block conteudo %}
+<h2>Buscar Voos</h2>
+<form action="buscar_voos.html" method="POST"> 
+    <p>Informe a Origem do Voo:<input type="text" id="i1" name="origem" autocomplete="off" value="POA"/> 
+    </p>
+    <p>Informe o Destino:do Voo:<input type="text" id="i2" name="destino" autocomplete="off" value="POA" /> 
+    </p>
+    <p>Informe a Data Hora 1:<input type="text" id="i3" name="datahora1"/> 
+    </p>
+    <p>Informe a Data Hora 2:<input type="text" id="i4" name="datahora2"/> 
+    </p>
+    <p>
+        <input type="reset" value="Redefinir"/></input>
+        <input type="submit" value="Enviar"/></input>
+    </p>
+</form>
+
+<hr>
+
+<h2>Lista de Voos</h2>
+<table border="1">
+    <tr>
+        <th> Companhia  </th>
+        <th> Aviao      </th>
+        <th> Origem     </th>
+        <th> Destino    </th>
+        <th> Data		</th>
+        <th> Preço		</th>
+        <th>            </th>
+    </tr>
+    {% for tupla in resultado %}
+        <tr>
+            <td> {{tupla['companhia']}} </td>
+            <td> {{tupla['aviao']}} </td>
+            <td> {{tupla['origem']}} </td>
+            <td> {{tupla['destino']}} </td>
+            <td> {{tupla['datahora']}} </td>
+            <td> {{tupla['preco']}} </td>
+            <td> <a href="/comprar_passagem?companhia={{tupla['companhia']}}&voo={{tupla['id']}}&origem={{tupla['origem']}}&destino={{tupla['destino']}}&data={{tupla['datahora']}}&preco={{tupla['preco']}}">Comprar</a></td>
+        <tr>
+    {% endfor %}
+</table>
+{% endblock %}
