@@ -1,0 +1,20 @@
+{% extends "layout.html" %}
+{% block conteudo %}
+        <form>
+            <p>Prato<br>
+                <select name="prato">
+                    <option hidden></option>
+                    {% for p in pratos %}
+                        <option value="{{p[0]}}">{{p[1]}}</option>
+                    {% endfor %}
+                </select></p>
+            <p>Cliente<br>
+                    <select name="cliente">
+                        <option hidden></option>
+                        {% for c in clientes %}
+                            <option value="{{c[0]}}">{{c[1]}}</option>
+                        {% endfor %}
+                    </select></p>
+            <p><button formaction="/venda/inserir" formmethod="POST">Enviar</button></p>
+        </form>
+{% endblock %}
