@@ -1,0 +1,19 @@
+		{% extends "layout.html" %}
+		{% block conteudo %}
+		
+     
+        <form method="post" action="/confirmar">
+            <h2>Compre seu Voo</h2>
+            <p><input type="text" name="id"  value="{{resultado['id']}}" readonly /></p>
+            <p><input type="text" name="voo" value="{{resultado['voo']}}" readonly /></p>
+            <h2>Identifique-se</h2>
+            <p><input type="text" name="cpf" placeholder="Digite o CPF do passageiro."  required/></p>
+            <p><input type="text" name="nome" placeholder="Digite o nome do passageiro." required /></p>
+
+            <p><button type="submit"  >Comprar</button></p>
+           
+ 
+           
+            
+        </form>
+		{% endblock %}
