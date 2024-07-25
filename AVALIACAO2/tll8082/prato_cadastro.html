@@ -1,8 +1,0 @@
-{% extends "layout.html" %}
-{% block conteudo %}
-        <form>
-            <p>Nome do Prato<br><input type="text" name="nome" /></p>
-            <p>Valor do Prato<br><input type="number" step="0.01" name="valor" /></p>
-            <p><button formaction="/prato/inserir" formmethod="POST">Enviar</button></p>
-        </form>
-{% endblock %}
