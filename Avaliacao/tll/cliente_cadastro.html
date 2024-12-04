@@ -1,0 +1,8 @@
+{% extends "layout.html" %}
+{% block conteudo %}
+        <form>
+            <p>Nome do Cliente<br><input type="text" name="nome" /></p>
+            <p>CPF do Cliente<br><input type="text" name="cpf" /></p>
+            <p><button formaction="/cliente/inserir" formmethod="POST">Enviar</button></p>
+        </form>
+{% endblock %}

@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <meta charset="utf-8" />
+    </head>
+    <body>
+        <h1>Cartório Sete de Setembro</h1>
+        <p>
+            <a href="/listapessoa">Lista Pessoas</a>
+            <a href="/cadastropessoa">Cadastrar Pessoa</a>
+        </p>
+        <h1>Lista de Arquivos</h1>
+        <h2>{{pessoa[1]}}</h2>
+        <h3>{{pessoa[0]}}</h3>
+        <div>
+        {% for arquivo in arquivos %}
+            <div>
+                <img src="data:image/png;base64,{{arquivo[0]}}" />
+                <span>{{arquivo[1]}}</span>
+            </div>
+        {% endfor %}
+        <style>
+            div div { width: 300px; }
+            div div img { width: 100%; }
+        </style>
+        </div>
+    </body>
+</html>
