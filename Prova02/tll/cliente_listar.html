@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+{% block conteudo %}
+        <table border="1">
+            <tr>
+                <td>Nome</td>
+                <td>CPF</td>
+                <td></td>
+            </tr>
+            {% for tupla in resultado %}
+                <tr>
+                    <td>{{tupla[1]}}</td>
+                    <td>{{tupla[2]}}</td>
+                    <td><a href="/cliente/remover?id={{tupla[0]}}">&nbsp;X&nbsp;</a></td>
+                </tr>
+            {% endfor %}
+        </table>
+{% endblock %}
